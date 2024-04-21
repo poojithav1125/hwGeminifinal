@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Homes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Dream Homes</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#houses">Houses</a></li>
+                    <button id="contact-btn">Contact</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="houses" class="houses">
+            <h2 class="heading">Available Houses</h2>
+            <div class="houses-container">
+                <article class="house">
+                    <img src="images/house1.jpg" alt="House 1">
+                    <h3>Modern Family Home</h3>
+                    <p>This spacious 4-bedroom house features a modern open floor plan, a large backyard with a pool, and a 2-car garage. Perfect for families!</p>
+                    <ul class="details">
+                        <li>Bedrooms: 4</li>
+                        <li>Bathrooms: 2.5</li>
+                        <li>Square Footage: 2,500 sq ft</li>
+                        <li>Price: $500,000</li>
+                    </ul>
+                    <button class="view-details">View Details</button>
+                </article>
+                <article class="house">
+                    <img src="images/house2.jpg" alt="House 2">
+                    <h3>Charming Starter Home</h3>
+                    <p>This cozy 2-bedroom bungalow offers a charming front porch, a fully renovated kitchen, and a private fenced backyard. Ideal for first-time buyers!</p>
+                    <ul class="details">
+                        <li>Bedrooms: 2</li>
+                        <li>Bathrooms: 1</li>
+                        <li>Square Footage: 1,200 sq ft</li>
+                        <li>Price: $350,000</li>
+                    </ul>
+                    <button class="view-details">View Details</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="heading">Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Copyright Dream Homes 2024</p>
+        </div>
+    </footer>
+
+    <script>
+        const contactBtn = document.getElementById('contact-btn');
+        const contactForm = document.getElementById('contact-form');
+
+        contactBtn.addEventListener('click', function() {
+            const contactSection = document.getElementById('contact');
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        const viewDetailsBtns = document.querySelectorAll('.view-details');
+        viewDetailsBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Add functionality for detailed house view here
+                alert('You clicked the view details button!');
+            });
+        });
+
+        // Add form validation and submission logic here
+    </script>
+</body>
+</html>
